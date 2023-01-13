@@ -17,6 +17,7 @@ class ShowTest extends TestCase
 
         $this->get(route('products.show', $product))
         ->assertStatus(200)
-        ->assertSee($product->name);
+        ->assertSee($product->name)
+        ->assertSee(route('products.index'));
     }
 }
