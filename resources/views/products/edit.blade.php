@@ -2,7 +2,7 @@
     @csrf
     @method('PUT')
 
-    <input type="text" name="name"calue={{$product->name}}>
+    <input type="text" name="name" value="{{$product->name}}">
 
     <input type="submit" value="Actualizar">
 </form>

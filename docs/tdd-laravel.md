@@ -79,3 +79,13 @@ php artisan route:list
 ## Crear método del controlador
 
 Cuando la vista está vacía la llamada a assertSee da verdadero y el test no falla.
+
+
+## Pasos generales
+
+1. Crear el test para una funcionalidad concreta (método de un controlador).
+2. Probar y corregir los fallos.
+3. Refactorizar.
+4. Hacer lo mismo para todas las funcionalidades. Sólo trabajamos con el editor, la consola y la base de datos de tests.
+5. Ejecutar las migraciones en la base de datos real.
+6. Trabajar con las vistas y probar visualmente en el navegador y en la consola (ejecutar y completar los tests).
