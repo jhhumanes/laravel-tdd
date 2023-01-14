@@ -28,10 +28,16 @@ La base de datos se configura en el archivo **phpunit.xml**:
 Creación de un test de funcionalidad, manteniendo la estructura de carpetas del método que se quiere probar:
 
 ```bash
+# Crear test de integración
 php artisan make:test Http/Controllers/ProductController/IndexTest
+
+# Crear test de unitario
+php artisan make:test UserTest --unit
 ```
 
 Las clases de test que utilicen la base de datos deberán incluir el trait `use RefreshDatabase;`.
+
+Los tests que utilicen funcionalidades de LAravel deben extender de `use Tests\TestCase;`, el resto de `use PHPUnit\Framework\TestCase;`.
 
 ```php
 <?php
