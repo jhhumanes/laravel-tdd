@@ -95,3 +95,31 @@ Cuando la vista está vacía la llamada a assertSee da verdadero y el test no fa
 4. Hacer lo mismo para todas las funcionalidades. Sólo trabajamos con el editor, la consola y la base de datos de tests.
 5. Ejecutar las migraciones en la base de datos real.
 6. Trabajar con las vistas y probar visualmente en el navegador y en la consola (ejecutar y completar los tests).
+
+## Tests de aceptación
+
+```bash
+composer require --dev laravel/dusk
+php artisan dusk:install
+```
+
+Se habrá creado la carpeta tests/Browser.
+
+Ejecutar los tests:
+
+```bash
+php artisan dusk
+```
+
+Google Chrome debe estar actualizado y la variable APP_URL en el archivo .env debe tener un valor correcto.
+
+
+Crear test:
+
+```bash
+php artisan dusk:make PageTest
+```
+
+Si en el archivo DuskTestCase se comenta la línea `'--headless',` se abrirá el navegador al ejecutar los tests.
+
+Si hay errores con la versión del driver de Chrome al hacer dusk:install, actuaizar Chrome (Ayuda - Información de Google Chrome).
